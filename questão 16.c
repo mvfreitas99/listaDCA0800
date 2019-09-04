@@ -1,0 +1,50 @@
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+	
+	float x1, y1, x2, y2, x3, y3, l1, l2, l3, tmp;
+	
+	// P1(5,3)
+	// P2(2,2)
+	// P3(3,5)
+
+	printf("Qual a coordenada X do ponto 1: ");
+	scanf("%f", &x1);
+	printf("Qual a coordenada y do ponto 1: ");
+	scanf("%f", &y1);
+	
+	printf("Qual a coordenada X do ponto 2: ");
+	scanf("%f", &x2);
+	printf("Qual a coordenada y do ponto 2: ");
+	scanf("%f", &y2);
+	
+	printf("Qual a coordenada X do ponto 3: ");
+	scanf("%f", &x3);
+	printf("Qual a coordenada y do ponto 3: ");
+	scanf("%f", &y3);
+	
+	l1 = sqrt((x1-x2)*(x1-x2) + (y1-y2)*(y1-y2));
+	l2 = sqrt((x1-x3)*(x1-x3) + (y1-y3)*(y1-y3));
+	l3 = sqrt((x3-x2)*(x3-x2) + (y3-y2)*(y3-x2));
+
+
+
+	if(l1<(l2 + l3) || l2 < (l1+l3) || l3<(l2+l1)){
+	printf("E um triangulo\n");
+	}else{
+		printf("nao e um triangulo\n");
+	}
+	if((l1==l2) && (l2==l3)){
+		printf("EQUILATERO \n");
+	}
+	else if ((l1 == l2) || (l2==l3) || (l1==l3)){
+		printf("ISOSCELES\n");
+	}
+	else{
+		printf("ESCALENO\n");
+	}
+
+
+	return 0;
+}

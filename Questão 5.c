@@ -1,0 +1,21 @@
+#include <stdio.h>
+//Informe a área e o volume de um cilindro
+//area = 2.pi.r.h
+//volume = r².pi.h
+int main(){
+	float raio, altura, volume, area;
+	float pi = 3.141519;
+	printf("digite o valor do raio do cilindro: ");
+	scanf("%f", &raio);
+	printf("digite a altura do cilindro: ");
+	scanf("%f", &altura);
+	
+	area = pi*(2*raio*altura);
+	volume = pi*raio*raio*altura;
+	printf("A area do cilindro e: %f m3", area);
+	printf("\n");
+	printf("O volume do cilindro e: %f L", volume);
+
+	
+return 0;
+}

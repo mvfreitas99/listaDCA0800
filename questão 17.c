@@ -1,0 +1,31 @@
+#include <stdio.h>
+
+int main(){
+	int n1, n2, n3, n4, par=0;
+	
+	printf("digite o primeiro numero: ");
+	scanf("%d", &n1);
+	printf("digite o segundo numero: ");
+	scanf("%d", &n2);
+	printf("digite o terceiro numero: ");
+	scanf("%d", &n3);
+	printf("digite o quartp numero: ");
+	scanf("%d", &n4);
+	
+	if(n1%2==0){
+		par+=n1;
+	}
+	if(n2%2==0){
+		par+=n2;
+	}
+	if(n3%2==0){
+		par+=n3;
+	}
+	if(n4%2==0){
+		par+=n4;
+	}
+	
+	printf("a soma dos numeros pares e: %d", par);
+	
+	return 0;
+}
